@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "allowImportingTsExtensions": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@entities/*": ["./src/entities/*"],
+      "@features/*": ["./src/features/*"],
+      "@intl": ["./src/utils/intl"],
+      "@sharedComponents/*": ["./src/shared/components/*"],
+      "@sharedHooks/*": ["./src/shared/hooks/*"],
+      "@sharedHelpers/*": ["./src/shared/helpers/*"],
+      "@sharedUtils/*": ["./src/shared/utils/*"],
+      "@sharedLibs/*": ["./src/shared/libs/*"],
+      "@sharedTypes/*": ["./src/shared/types/*"],
+      "@widgets/*": ["./src/widgets/*"],
+      "@templates/*": ["./src/templates/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@pages": ["./src/pages"],
+      "@pages/*": ["./src/pages/*"],
+      "@consts": ["./src/consts"],
+      "@consts/*": ["./src/consts/*"]
+    },
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "ignoreDeprecations": "6.0",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src", "vite.config.ts", "eslint.config.mjs"]
+}

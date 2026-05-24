@@ -1,0 +1,87 @@
+{
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "bracketSpacing": false,
+  "jsxSingleQuote": true,
+  "printWidth": 120,
+  "proseWrap": "always",
+  "semi": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "all",
+  "singleAttributePerLine": true,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "*.{ts,tsx,js,mjs,cjs}",
+      "options": {
+        "plugins": ["@ianvs/prettier-plugin-sort-imports"],
+        "importOrder": [
+          "^react$",
+          "",
+          "<THIRD_PARTY_MODULES>",
+          "",
+          "<TYPES>",
+          "^@sharedTypes",
+          "types$",
+          "",
+          "^@entities",
+          "entity$",
+          "",
+          "^@features",
+          "feature$",
+          "",
+          "^@widgets",
+          "widget$",
+          "",
+          "^@layouts",
+          "",
+          "^@pages",
+          "",
+          "^@templates",
+          "",
+          "model$",
+          "",
+          "^@sharedHooks",
+          "",
+          "^@sharedComponents",
+          "",
+          "^@sharedHelpers",
+          "",
+          "^@sharedUtils",
+          "",
+          "/ui/",
+          "",
+          "lib/",
+          "messages$",
+          ".scss$",
+          "",
+          "^@consts",
+          "consts$",
+          "",
+          "^[.]"
+        ],
+        "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+        "importOrderTypeScriptVersion": "5.0.0"
+      }
+    },
+    {
+      "files": "*.yaml",
+      "options": {
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": "*.yml",
+      "options": {
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": "**/CHANGELOG.md",
+      "options": {
+        "printWidth": 200
+      }
+    }
+  ]
+}
