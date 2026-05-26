@@ -2,8 +2,8 @@
 
 ## Application Shape
 
-This repository is a private Vite single-page application template for React projects that use React Router DOM and
-React Intl.
+This repository is a Vite single-page application for Craftulator, a universal production-chain calculator for games. It
+uses React, React Router DOM, React Intl, and AntD v5.
 
 The app starts in `src/main.tsx`, mounts into `index.html`, and renders routes from `src/app/app-routes.tsx`.
 `src/layouts/root` owns the shared shell and route outlet.
@@ -26,13 +26,19 @@ they do not contain UI or business logic. App routes import page components only
 
 ## Routing
 
-Routes are declared with React Router DOM:
+Routes are declared with React Router DOM and must use `BrowserRouter` without `basename`, because the target GitHub
+Pages URL is the root-path organization site `https://craftulator.github.io/`.
 
-- `/`: localized home page.
-- `/about`: localized about page.
+- `/`: home page with a hardcoded starter game list.
+- `/editor`: recipe and calculator data editor.
+- `/games/:gameId/calculator`: not registered yet; links may point to this shape, but they currently resolve through the
+  404 page.
 - `*`: localized not-found page.
 
 `AppRoutes` is exported so tests and future templates can render the same route tree used by the browser entrypoint.
+
+GitHub Pages must include a `404.html` fallback so direct navigation to client-side routes can load the single-page
+application.
 
 ## Internationalization
 

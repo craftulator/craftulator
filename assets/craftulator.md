@@ -16,8 +16,12 @@ The site must consist of three main pages:
 ## Architecture
 
 - Use the current repository as the foundation.
-- Use BrowserRouter with a 404.html fallback.
-- Use the root domain for GitHub Pages.
+- Use `BrowserRouter` without `basename`.
+- Use a `404.html` fallback.
+- Use the root path on GitHub Pages; the target public URL is `https://craftulator.github.io/`.
+- The repository is hosted under the `craftulator` organization.
+- The GitHub Pages site must be an organization site published from a public repository named `craftulator.github.io`.
+- Use `/` as the Vite base path.
 
 ## Language
 
@@ -26,6 +30,8 @@ Initially, build the site in English using react-intl.
 ## Deployment
 
 The site must be deployed to GitHub Pages; configure CI accordingly.
+
+The CI workflow must deploy the built static site to the `craftulator/craftulator.github.io` GitHub Pages site.
 
 ## Technology Stack
 
@@ -176,12 +182,14 @@ Elements:
 
 Stages:
 
-- building the editor page must be split into stages and done incrementally
+- the editor page scope includes all sections described below, including the full icon-adding flow
+- building the editor page must be split into small incremental stages
+- follow the roadmap in `docs/roadmap.md`
 
 Import:
 
 - when importing a JSON file, validate it; if the file is valid, replace all form data with the data from the file
-- during validation:
+- during import validation:
   - empty string values are considered valid
   - broken images are removed from the affected image field, but the surrounding entity is kept
 
@@ -277,6 +285,7 @@ Elements:
 
 Icon-adding flow:
 
+- the full icon-adding flow must be implemented, but it must be split into small incremental steps
 - choose an image file from the computer
 - open a modal with a preview of the selected image
   - at the top, a select for choosing the icon sizing mode: manual or "fixed size". When "fixed size" is selected, show
