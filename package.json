@@ -1,27 +1,29 @@
 {
-  "name": "react-router-dom-llm-template",
+  "name": "craftulator",
   "version": "0.1.0",
-  "description": "A React, React Router DOM, and React Intl application template for LLM-assisted development.",
+  "description": "Universal production-chain calculator for games.",
   "license": "MIT",
   "author": "Dmitriy Ermolaev",
   "type": "module",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iusfof/react-router-dom-llm-template.git"
+    "url": "git+https://github.com/craftulator/craftulator.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/iusfof/react-router-dom-llm-template/issues"
+    "url": "https://github.com/craftulator/craftulator.github.io/issues"
   },
-  "homepage": "https://github.com/iusfof/react-router-dom-llm-template#readme",
+  "homepage": "https://craftulator.github.io/",
   "keywords": [
-    "typescript",
+    "calculator",
+    "crafting",
+    "games",
+    "production-chain-calculator",
     "react",
-    "react-router-dom",
     "react-intl",
-    "vite",
-    "boilerplate",
-    "llm-agents"
+    "react-router-dom",
+    "typescript",
+    "vite"
   ],
   "engines": {
     "node": "24.x"
@@ -33,7 +35,7 @@
     "dev": "vite",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint src vite.config.ts",
+    "lint": "eslint src vite.config.ts *.tests.ts",
     "lint-staged": "lint-staged",
     "preview": "vite preview",
     "prepare": "husky",

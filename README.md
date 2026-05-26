@@ -1,16 +1,26 @@
-# react-router-dom-llm-template
+# Craftulator
 
-A React, React Router DOM, and React Intl application template for LLM-assisted development.
+Craftulator is a universal production-chain calculator for games such as Factorio, Dyson Sphere Program, Satisfactory,
+and Shapez.
 
-## Features
+## Project Status
+
+The project is in early foundation work. The planned site includes:
+
+- a home page with a game list;
+- an editor for importing, editing, and exporting calculator data;
+- future game-specific calculator pages;
+- a 404 page for unknown routes.
+
+## Technical Foundation
 
 - Vite React application source in `src/`.
-- React Router DOM route setup for home, about, and not-found pages.
-- React Intl provider and message catalog structure.
+- React Router DOM routing with `BrowserRouter` and no `basename`.
+- React Intl provider and local `defineMessages()` descriptors.
 - TypeScript strict mode.
 - Vitest, jsdom, and Testing Library tests.
 - ESLint and Prettier checks.
-- GitHub Actions CI for full template verification.
+- Root-path Vite deployment for `https://craftulator.github.io/`.
 
 ## Commands
 
@@ -27,11 +37,11 @@ npm run check
 
 ## Application Entry
 
-- `src/main.tsx` mounts the app.
-- `src/routing/AppRoutes.tsx` defines browser routes.
-- `src/i18n/AppIntlProvider.tsx` wires React Intl.
-- `src/i18n/messages.ts` stores supported locales and messages.
+- `src/main.tsx` mounts the app and wraps it in `BrowserRouter`.
+- `src/app/app-routes.tsx` defines the route table.
+- `src/app/app-intl-provider.tsx` wires React Intl.
+- `src/utils/intl.ts` exports the shared `@intl` instance for non-component code.
 
 ## Documentation
 
-Project documentation lives in `docs/`.
+Project documentation lives in `docs/`. The implementation roadmap is in `docs/roadmap.md`.

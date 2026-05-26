@@ -14,12 +14,12 @@ in later tasks.
 
 ## Milestone 1: Project Foundation
 
-- [ ] Update project metadata for Craftulator in `package.json`, `README.md`, and related documentation.
+- [x] Update project metadata for Craftulator in `package.json`, `README.md`, and related documentation.
 - [ ] Confirm the repository is hosted under the `craftulator` GitHub organization.
-- [ ] Configure Vite for root-path deployment with `base: '/'`.
-- [ ] Keep `BrowserRouter` without `basename`.
-- [ ] Verify TypeScript path aliases and FSD-like boundaries match the planned app structure.
-- [ ] Run relevant checks for configuration-only changes.
+- [x] Configure Vite for root-path deployment with `base: '/'`.
+- [x] Keep `BrowserRouter` without `basename`.
+- [x] Verify TypeScript path aliases and FSD-like boundaries match the planned app structure.
+- [x] Run relevant checks for configuration-only changes.
 
 ## Milestone 2: Basic Branding And Static Assets
 
