@@ -5,9 +5,9 @@ export const messages = defineMessages({
     defaultMessage: 'Craftulator',
     id: 'app.brand',
   },
-  navAbout: {
-    defaultMessage: 'About',
-    id: 'nav.about',
+  navEditor: {
+    defaultMessage: 'Editor',
+    id: 'nav.editor',
   },
   navHome: {
     defaultMessage: 'Home',

@@ -2,7 +2,7 @@ import {useIntl} from 'react-intl';
 
 import {messages} from './messages.js';
 
-export function AboutTemplate() {
+export function EditorTemplate() {
   const {formatMessage} = useIntl();
 
   return (

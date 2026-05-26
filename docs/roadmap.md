@@ -32,13 +32,13 @@ in later tasks.
 
 ## Milestone 3: Base Routing And 404 Behavior
 
-- [ ] Create the main route table.
-- [ ] Add the home route at `/`.
-- [ ] Add the editor route at `/editor`.
-- [ ] Do not register `/games/:gameId/calculator` yet.
-- [ ] Add a 404 route for all unmatched paths.
-- [ ] Add a `404.html` fallback for GitHub Pages and `BrowserRouter`.
-- [ ] Verify direct navigation and reload behavior for `/`, `/editor`, and an unknown route.
+- [x] Create the main route table.
+- [x] Add the home route at `/`.
+- [x] Add the editor route at `/editor`.
+- [x] Do not register `/games/:gameId/calculator` yet.
+- [x] Add a 404 route for all unmatched paths.
+- [x] Add a `404.html` fallback for GitHub Pages and `BrowserRouter`.
+- [x] Verify direct navigation and reload behavior for `/`, `/editor`, and an unknown route.
 
 ## Milestone 4: Shared App Foundations
 

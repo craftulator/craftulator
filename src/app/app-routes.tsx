@@ -3,7 +3,7 @@ import {Route, Routes} from 'react-router-dom';
 import {RootLayout} from '@layouts/root';
 
 import {HomePage} from '@pages';
-import {AboutPage} from '@pages/about';
+import {EditorPage} from '@pages/editor';
 import {NotFoundPage} from '@pages/not-found';
 
 export function AppRoutes() {
@@ -15,8 +15,8 @@ export function AppRoutes() {
           path='/'
         />
         <Route
-          element={<AboutPage />}
-          path='/about'
+          element={<EditorPage />}
+          path='/editor'
         />
         <Route
           element={<NotFoundPage />}

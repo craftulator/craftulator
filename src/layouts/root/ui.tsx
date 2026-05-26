@@ -20,7 +20,7 @@ export function RootLayout() {
           className='app-nav'
         >
           <NavLink to='/'>{formatMessage(messages.navHome)}</NavLink>
-          <NavLink to='/about'>{formatMessage(messages.navAbout)}</NavLink>
+          <NavLink to='/editor'>{formatMessage(messages.navEditor)}</NavLink>
         </nav>
       </header>
       <main className='app-main'>
