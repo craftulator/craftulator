@@ -23,12 +23,12 @@ in later tasks.
 
 ## Milestone 2: Basic Branding And Static Assets
 
-- [ ] Generate production favicon assets from `assets/fav-icon/image.png`.
-- [ ] Wire favicon files into `index.html`.
-- [ ] Update the document `<title>` to `Craftulator`.
-- [ ] Update package and app display names where they still reference the template.
-- [ ] Add theme logo assets from `assets/themes/images` through normal app imports or public assets.
-- [ ] Verify favicon and title in a local browser.
+- [x] Generate production favicon assets from `assets/fav-icon/image.png`.
+- [x] Wire favicon files into `index.html`.
+- [x] Update the document `<title>` to `Craftulator`.
+- [x] Update package and app display names where they still reference the template.
+- [x] Add theme logo assets from `assets/themes/images` through normal app imports or public assets.
+- [x] Verify favicon and title in a local browser.
 
 ## Milestone 3: Base Routing And 404 Behavior
 

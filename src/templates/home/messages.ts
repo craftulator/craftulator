@@ -2,11 +2,11 @@ import {defineMessages} from 'react-intl';
 
 export const messages = defineMessages({
   description: {
-    defaultMessage: 'Build localized React apps with routed pages.',
+    defaultMessage: 'Plan production chains for your favorite factory games.',
     id: 'home.description',
   },
   title: {
-    defaultMessage: 'React Router Intl Template',
+    defaultMessage: 'Craftulator',
     id: 'home.title',
   },
 });

@@ -2,7 +2,7 @@ import {defineMessages} from 'react-intl';
 
 export const messages = defineMessages({
   brand: {
-    defaultMessage: 'React Router Intl Template',
+    defaultMessage: 'Craftulator',
     id: 'app.brand',
   },
   navAbout: {

@@ -20,15 +20,15 @@ describe('App routing and localization', () => {
   it('renders the localized home route through the pages layer', () => {
     renderApp('/');
 
-    expect(screen.getByRole('heading', {name: 'React Router Intl Template'})).toBeInTheDocument();
-    expect(screen.getByText('Build localized React apps with routed pages.')).toBeInTheDocument();
+    expect(screen.getByRole('heading', {name: 'Craftulator'})).toBeInTheDocument();
+    expect(screen.getByText('Plan production chains for your favorite factory games.')).toBeInTheDocument();
   });
 
   it('renders the localized about route through the pages layer', () => {
     renderApp('/about');
 
-    expect(screen.getByRole('heading', {name: 'About this template'})).toBeInTheDocument();
-    expect(screen.getByText('React Router handles navigation while React Intl formats copy.')).toBeInTheDocument();
+    expect(screen.getByRole('heading', {name: 'About Craftulator'})).toBeInTheDocument();
+    expect(screen.getByText('Craftulator helps build and share game production calculators.')).toBeInTheDocument();
   });
 
   it('renders the localized not found route through the pages layer', () => {

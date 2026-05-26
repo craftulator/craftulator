@@ -2,11 +2,11 @@ import {defineMessages} from 'react-intl';
 
 export const messages = defineMessages({
   description: {
-    defaultMessage: 'React Router handles navigation while React Intl formats copy.',
+    defaultMessage: 'Craftulator helps build and share game production calculators.',
     id: 'about.description',
   },
   title: {
-    defaultMessage: 'About this template',
+    defaultMessage: 'About Craftulator',
     id: 'about.title',
   },
 });
