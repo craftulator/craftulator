@@ -65,9 +65,12 @@ component-name/
   consts.ts
   model.ts
   messages.ts
+  images/
   lib/
   ui/
 ```
+
+All images that belong to a specific component must be stored in that component's `images/` directory.
 
 Example `messages.ts`:
 

@@ -75,9 +75,13 @@ component-name/
   consts.ts
   model.ts
   messages.ts
+  images/
   lib/
   ui/
 ```
+
+Store images that belong to a specific component in that component's `images/` directory. Shared or global image assets
+should remain in their owning shared asset location until a component explicitly imports them.
 
 Example `messages.ts`:
 

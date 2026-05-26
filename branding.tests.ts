@@ -37,11 +37,14 @@ describe('static branding assets', () => {
     await expect(access('public/site.webmanifest')).resolves.toBeUndefined();
   });
 
-  it('publishes all theme logo assets', async () => {
+  it('keeps theme logo assets source-only for future explicit component imports', async () => {
     await Promise.all(
-      themeLogoNames.map(async (themeLogoName) =>
-        expect(access(`public/theme-logos/${themeLogoName}.png`)).resolves.toBeUndefined(),
-      ),
+      themeLogoNames.flatMap((themeLogoName) => [
+        expect(access(`assets/themes/images/${themeLogoName}.png`)).resolves.toBeUndefined(),
+        expect(access(`public/theme-logos/${themeLogoName}.png`)).rejects.toMatchObject({
+          code: 'ENOENT',
+        }),
+      ]),
     );
   });
 });

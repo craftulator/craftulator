@@ -27,7 +27,7 @@ in later tasks.
 - [x] Wire favicon files into `index.html`.
 - [x] Update the document `<title>` to `Craftulator`.
 - [x] Update package and app display names where they still reference the template.
-- [x] Add theme logo assets from `assets/themes/images` through normal app imports or public assets.
+- [x] Keep theme logo source assets in `assets/themes/images` for future explicit component imports.
 - [x] Verify favicon and title in a local browser.
 
 ## Milestone 3: Base Routing And 404 Behavior
@@ -43,6 +43,7 @@ in later tasks.
 ## Milestone 4: Shared App Foundations
 
 - [ ] Add shared theme constants based on `assets/themes/themes.json`.
+- [ ] Add a logo display component that explicitly imports theme logo images from `assets/themes/images`.
 - [ ] Add shared route-independent constants in `src/consts` using the required prefixes.
 - [ ] Add React Intl message structure with local `defineMessages()` descriptors.
 - [ ] Add a root app shell that applies the current theme.
