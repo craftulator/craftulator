@@ -2,7 +2,7 @@ import {createContext, useContext, useEffect, useMemo, useState} from 'react';
 
 import {Button, ConfigProvider, Modal} from 'antd';
 import {useIntl} from 'react-intl';
-import {NavLink, Outlet, useLocation} from 'react-router-dom';
+import {NavLink, Outlet, useLocation, useNavigate} from 'react-router-dom';
 
 import type {AppShellContextValue, AppShellSettings} from './types.js';
 import type {CSSProperties} from 'react';
@@ -52,6 +52,7 @@ export function useAppShell(settings: AppShellSettings) {
 export function RootLayout() {
   const {formatMessage} = useIntl();
   const location = useLocation();
+  const navigate = useNavigate();
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [shellSettings, setShellSettings] = useState<AppShellSettings>(defaultShellSettings);
   const currentTheme = THEMES[shellSettings.themeKey] ?? DEFAULT_THEME;
@@ -101,8 +102,10 @@ export function RootLayout() {
             >
               {!isEditorRoute && (
                 <Button
-                  href={LINK_EDITOR}
                   type='primary'
+                  onClick={() => {
+                    navigate(LINK_EDITOR);
+                  }}
                 >
                   {formatMessage(messages.create)}
                 </Button>
@@ -125,12 +128,10 @@ export function RootLayout() {
           </main>
           <CommonFooter />
           <Modal
+            footer={null}
             open={isHelpOpen}
             title={helpTitle}
             onCancel={() => {
-              setIsHelpOpen(false);
-            }}
-            onOk={() => {
               setIsHelpOpen(false);
             }}
           >
