@@ -9,14 +9,16 @@ export function GameInfo({name, image, description, link}: GameInfoProps) {
   const {formatMessage} = useIntl();
   const displayName = name?.trim() || formatMessage(messages.namePlaceholder);
   const displayDescription = description?.trim() || formatMessage(messages.descriptionPlaceholder);
+  const displayImage = image?.trim();
+  const displayLink = link?.trim();
 
   return (
     <article className='game-info'>
       <div className='game-info__image'>
-        {image ? (
+        {displayImage ? (
           <img
             alt={formatMessage(messages.imageAlt, {name: displayName})}
-            src={image}
+            src={displayImage}
           />
         ) : (
           <span>{formatMessage(messages.logoPlaceholder)}</span>
@@ -25,9 +27,9 @@ export function GameInfo({name, image, description, link}: GameInfoProps) {
       <div className='game-info__body'>
         <h2>{displayName}</h2>
         <p>{displayDescription}</p>
-        {link ? (
+        {displayLink ? (
           <Button
-            href={link}
+            href={displayLink}
             target='_blank'
             rel='noreferrer'
             type='link'

@@ -27,7 +27,12 @@ afterEach(() => {
 
 describe('GameInfo', () => {
   it('renders placeholders for missing game values', () => {
-    renderGameInfo(<GameInfo />);
+    renderGameInfo(
+      <GameInfo
+        image='   '
+        link='   '
+      />,
+    );
 
     expect(screen.getByRole('heading', {name: 'Untitled game'})).toBeInTheDocument();
     expect(screen.getByText('No game logo yet')).toBeInTheDocument();
