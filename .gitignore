@@ -3,6 +3,7 @@ dist/
 coverage/
 .npm-cache/
 .worktrees/
+.superpowers/
 
 *.log
 .DS_Store
