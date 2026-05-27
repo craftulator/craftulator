@@ -1,1 +1,2 @@
-export {RT_LOCALE} from './rt.js';
+export * from './links.js';
+export * from './rt.js';

@@ -1,0 +1,179 @@
+import {RT_DEFAULT_THEME_KEY} from '@consts';
+
+export type ThemeKey =
+  | 'general'
+  | 'precise'
+  | 'engineering'
+  | 'space'
+  | 'alchemical'
+  | 'fantasy'
+  | 'biological'
+  | 'animal'
+  | 'medieval'
+  | 'futuristic'
+  | 'esoteric';
+
+export type CraftulatorTheme = {
+  colorPrimary: string;
+  colorInfo: string;
+  colorBgLayout: string;
+  colorBgContainer: string;
+  colorText: string;
+  colorBorder: string;
+  headerBackground: string;
+  headerText: string;
+  footerBackground: string;
+  footerText: string;
+};
+
+export const THEME_KEYS = [
+  'general',
+  'precise',
+  'engineering',
+  'space',
+  'alchemical',
+  'fantasy',
+  'biological',
+  'animal',
+  'medieval',
+  'futuristic',
+  'esoteric',
+] as const satisfies readonly ThemeKey[];
+
+export const THEMES: Record<ThemeKey, CraftulatorTheme> = {
+  general: {
+    colorPrimary: '#1f7a8c',
+    colorInfo: '#1f7a8c',
+    colorBgLayout: '#f1f7fa',
+    colorBgContainer: '#ffffff',
+    colorText: '#102a43',
+    colorBorder: '#b9cbd3',
+    headerBackground: '#1f7a8c',
+    headerText: '#f0fbff',
+    footerBackground: '#102a43',
+    footerText: '#d9e2ec',
+  },
+  precise: {
+    colorPrimary: '#1f9aa0',
+    colorInfo: '#1f9aa0',
+    colorBgLayout: '#eef8f9',
+    colorBgContainer: '#fbfeff',
+    colorText: '#172a31',
+    colorBorder: '#9ccdd1',
+    headerBackground: '#263238',
+    headerText: '#e9fbfc',
+    footerBackground: '#172126',
+    footerText: '#cde9eb',
+  },
+  engineering: {
+    colorPrimary: '#6f7882',
+    colorInfo: '#6f7882',
+    colorBgLayout: '#f4f2ee',
+    colorBgContainer: '#fffdf8',
+    colorText: '#24292e',
+    colorBorder: '#c4beb4',
+    headerBackground: '#2d3135',
+    headerText: '#f4f1ea',
+    footerBackground: '#1f2225',
+    footerText: '#d7d2ca',
+  },
+  space: {
+    colorPrimary: '#1689d9',
+    colorInfo: '#1689d9',
+    colorBgLayout: '#edf6ff',
+    colorBgContainer: '#fafdff',
+    colorText: '#10233d',
+    colorBorder: '#9cc7eb',
+    headerBackground: '#102642',
+    headerText: '#e6f4ff',
+    footerBackground: '#08182b',
+    footerText: '#c7def4',
+  },
+  alchemical: {
+    colorPrimary: '#b8860b',
+    colorInfo: '#b8860b',
+    colorBgLayout: '#fbf4e4',
+    colorBgContainer: '#fffaf0',
+    colorText: '#3a2a12',
+    colorBorder: '#d7bc78',
+    headerBackground: '#5a3917',
+    headerText: '#fff4d6',
+    footerBackground: '#2f1f10',
+    footerText: '#edd9ad',
+  },
+  fantasy: {
+    colorPrimary: '#2f6edb',
+    colorInfo: '#2f6edb',
+    colorBgLayout: '#eef4ff',
+    colorBgContainer: '#fbfdff',
+    colorText: '#182642',
+    colorBorder: '#aebee0',
+    headerBackground: '#3b2f25',
+    headerText: '#edf4ff',
+    footerBackground: '#221b17',
+    footerText: '#d8d2c8',
+  },
+  biological: {
+    colorPrimary: '#5f8f22',
+    colorInfo: '#5f8f22',
+    colorBgLayout: '#f1f8e9',
+    colorBgContainer: '#fbfff7',
+    colorText: '#203516',
+    colorBorder: '#b7cf9a',
+    headerBackground: '#23401f',
+    headerText: '#f0ffe6',
+    footerBackground: '#152713',
+    footerText: '#cfe4c0',
+  },
+  animal: {
+    colorPrimary: '#a8632f',
+    colorInfo: '#a8632f',
+    colorBgLayout: '#f8efe3',
+    colorBgContainer: '#fffaf3',
+    colorText: '#3b2618',
+    colorBorder: '#d2aa82',
+    headerBackground: '#4a2f22',
+    headerText: '#fff1df',
+    footerBackground: '#2b1c15',
+    footerText: '#e6cdb5',
+  },
+  medieval: {
+    colorPrimary: '#7a4a2a',
+    colorInfo: '#7a4a2a',
+    colorBgLayout: '#f3eee7',
+    colorBgContainer: '#fffaf2',
+    colorText: '#2f261e',
+    colorBorder: '#bca88f',
+    headerBackground: '#2e2a27',
+    headerText: '#f2e6d5',
+    footerBackground: '#1d1a18',
+    footerText: '#d6c6b3',
+  },
+  futuristic: {
+    colorPrimary: '#10aeea',
+    colorInfo: '#10aeea',
+    colorBgLayout: '#edf8fc',
+    colorBgContainer: '#f9feff',
+    colorText: '#102a35',
+    colorBorder: '#90d8eb',
+    headerBackground: '#11181f',
+    headerText: '#e1fbff',
+    footerBackground: '#080d12',
+    footerText: '#bceaf5',
+  },
+  esoteric: {
+    colorPrimary: '#7a35c8',
+    colorInfo: '#7a35c8',
+    colorBgLayout: '#f4eff8',
+    colorBgContainer: '#fffbff',
+    colorText: '#251733',
+    colorBorder: '#c2a8dd',
+    headerBackground: '#1f1630',
+    headerText: '#f5eaff',
+    footerBackground: '#120c1d',
+    footerText: '#dcc7f0',
+  },
+};
+
+export const DEFAULT_THEME_KEY = RT_DEFAULT_THEME_KEY satisfies ThemeKey;
+export const DEFAULT_THEME = THEMES[DEFAULT_THEME_KEY];

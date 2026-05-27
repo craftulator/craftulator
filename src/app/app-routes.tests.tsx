@@ -28,6 +28,12 @@ describe('App routing and localization', () => {
     expect(screen.getByText('Plan production chains for your favorite factory games.')).toBeInTheDocument();
   });
 
+  it('applies the general theme to the home shell', () => {
+    renderApp('/');
+
+    expect(screen.getByTestId('app-shell')).toHaveAttribute('data-theme', 'general');
+  });
+
   it('renders the localized editor route through the pages layer', () => {
     renderApp('/editor');
 
