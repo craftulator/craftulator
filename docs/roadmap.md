@@ -42,17 +42,17 @@ in later tasks.
 
 ## Milestone 4: Shared App Foundations
 
-- [ ] Add shared theme constants based on `assets/themes/themes.json`.
-- [ ] Add a logo display component that explicitly imports theme logo images from `assets/themes/images`.
-- [ ] Add shared route-independent constants in `src/consts` using the required prefixes.
-- [ ] Add React Intl message structure with local `defineMessages()` descriptors.
-- [ ] Add a root app shell that applies the current theme.
-- [ ] Add a fixed header with the theme logo, Create link, and help button.
-- [ ] Hide the Create link on `/editor`.
-- [ ] Add per-page help modal summaries.
-- [ ] Add `CommonFooter` with the game rights notice.
-- [ ] Add `GameInfo` with placeholders for missing game name, image, description, and link.
-- [ ] Cover shared behavior with focused component tests where useful.
+- [x] Add shared theme constants based on `assets/themes/themes.json`.
+- [x] Add a logo display component that explicitly imports theme logo images from `assets/themes/images`.
+- [x] Add shared route-independent constants in `src/consts` using the required prefixes.
+- [x] Add React Intl message structure with local `defineMessages()` descriptors.
+- [x] Add a root app shell that applies the current theme.
+- [x] Add a fixed header with the theme logo, Create link, and help button.
+- [x] Hide the Create link on `/editor`.
+- [x] Add per-page help modal summaries.
+- [x] Add `CommonFooter` with the game rights notice.
+- [x] Add `GameInfo` with placeholders for missing game name, image, description, and link.
+- [x] Cover shared behavior with focused component tests where useful.
 
 ## Milestone 5: Home Page
 
