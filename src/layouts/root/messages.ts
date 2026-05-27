@@ -5,12 +5,20 @@ export const messages = defineMessages({
     defaultMessage: 'Craftulator',
     id: 'app.brand',
   },
-  navEditor: {
-    defaultMessage: 'Editor',
-    id: 'nav.editor',
+  create: {
+    defaultMessage: 'Create',
+    id: 'nav.create',
   },
-  navHome: {
-    defaultMessage: 'Home',
-    id: 'nav.home',
+  defaultHelpSummary: {
+    defaultMessage: 'Craftulator helps organize production-chain calculator data for factory games.',
+    id: 'help.defaultSummary',
+  },
+  defaultHelpTitle: {
+    defaultMessage: 'About this page',
+    id: 'help.defaultTitle',
+  },
+  openHelp: {
+    defaultMessage: 'Open help',
+    id: 'help.open',
   },
 });

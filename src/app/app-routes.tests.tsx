@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/vitest';
 
-import {cleanup, render, screen} from '@testing-library/react';
+import {cleanup, fireEvent, render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
 import {afterEach, describe, expect, it} from 'vitest';
 
@@ -34,11 +34,32 @@ describe('App routing and localization', () => {
     expect(screen.getByTestId('app-shell')).toHaveAttribute('data-theme', 'general');
   });
 
+  it('shows the Create link outside the editor route', () => {
+    renderApp('/');
+
+    expect(screen.getByRole('link', {name: 'Create'})).toHaveAttribute('href', '/editor');
+  });
+
   it('renders the localized editor route through the pages layer', () => {
     renderApp('/editor');
 
     expect(screen.getByRole('heading', {name: 'Editor'})).toBeInTheDocument();
     expect(screen.getByText('Create and edit Craftulator game data.')).toBeInTheDocument();
+  });
+
+  it('hides the Create link on the editor route', () => {
+    renderApp('/editor');
+
+    expect(screen.queryByRole('link', {name: 'Create'})).not.toBeInTheDocument();
+  });
+
+  it('opens route-specific help content from the header', () => {
+    renderApp('/editor');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Open help'}));
+
+    expect(screen.getByRole('dialog')).toBeInTheDocument();
+    expect(screen.getByText('Create and edit Craftulator game data before exporting it as JSON.')).toBeInTheDocument();
   });
 
   it.each(['/missing', '/about', '/games/factorio/calculator'])(
