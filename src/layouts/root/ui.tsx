@@ -2,7 +2,7 @@ import {createContext, useContext, useEffect, useMemo, useState} from 'react';
 
 import {Button, ConfigProvider, Modal} from 'antd';
 import {useIntl} from 'react-intl';
-import {NavLink, Outlet, useLocation, useNavigate} from 'react-router-dom';
+import {NavLink, Outlet, useLocation} from 'react-router-dom';
 
 import type {AppShellContextValue, AppShellSettings} from './types.js';
 import type {CSSProperties} from 'react';
@@ -10,7 +10,7 @@ import type {CSSProperties} from 'react';
 import {CommonFooter} from '../../shared/ui/common-footer/index.js';
 import {ThemeLogo} from '../../shared/ui/theme-logo/index.js';
 
-import {LINK_EDITOR} from '@consts';
+import {LINK_EDITOR, LINK_HOME} from '@consts';
 
 import {DEFAULT_THEME, DEFAULT_THEME_KEY, THEMES} from '../../shared/theme/index.js';
 import {messages} from './messages.js';
@@ -52,7 +52,6 @@ export function useAppShell(settings: AppShellSettings) {
 export function RootLayout() {
   const {formatMessage} = useIntl();
   const location = useLocation();
-  const navigate = useNavigate();
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [shellSettings, setShellSettings] = useState<AppShellSettings>(defaultShellSettings);
   const currentTheme = THEMES[shellSettings.themeKey] ?? DEFAULT_THEME;
@@ -91,7 +90,7 @@ export function RootLayout() {
           <header className='app-header'>
             <NavLink
               className='app-brand'
-              to='/'
+              to={LINK_HOME}
             >
               <ThemeLogo themeKey={shellSettings.themeKey} />
               <span>{formatMessage(messages.brand)}</span>
@@ -101,14 +100,12 @@ export function RootLayout() {
               className='app-nav'
             >
               {!isEditorRoute && (
-                <Button
-                  type='primary'
-                  onClick={() => {
-                    navigate(LINK_EDITOR);
-                  }}
+                <NavLink
+                  className='app-create-link'
+                  to={LINK_EDITOR}
                 >
                   {formatMessage(messages.create)}
-                </Button>
+                </NavLink>
               )}
               <Button
                 aria-label={openHelpLabel}

@@ -74,6 +74,32 @@ a {
   gap: 10px;
 }
 
+.app-create-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 4px 15px;
+  border: 1px solid var(--app-color-primary, #1f7a8c);
+  border-radius: 6px;
+  color: #ffffff;
+  background: var(--app-color-primary, #1f7a8c);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+  font-size: 14px;
+  line-height: 1.5715;
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.app-create-link:hover,
+.app-create-link:focus-visible {
+  border-color: color-mix(in srgb, var(--app-color-primary, #1f7a8c) 82%, #ffffff);
+  color: #ffffff;
+  background: color-mix(in srgb, var(--app-color-primary, #1f7a8c) 82%, #ffffff);
+}
+
 .app-help-button {
   flex: 0 0 auto;
 }

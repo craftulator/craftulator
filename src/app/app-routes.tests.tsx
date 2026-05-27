@@ -37,7 +37,11 @@ describe('App routing and localization', () => {
   it('navigates to the editor route from the Create action outside the editor route', () => {
     renderApp('/');
 
-    fireEvent.click(screen.getByRole('button', {name: 'Create'}));
+    const createLink = screen.getByRole('link', {name: 'Create'});
+
+    expect(createLink).toHaveAttribute('href', '/editor');
+
+    fireEvent.click(createLink);
 
     expect(screen.getByRole('heading', {name: 'Editor'})).toBeInTheDocument();
     expect(screen.getByText('Create and edit Craftulator game data.')).toBeInTheDocument();
@@ -53,7 +57,7 @@ describe('App routing and localization', () => {
   it('hides the Create link on the editor route', () => {
     renderApp('/editor');
 
-    expect(screen.queryByRole('button', {name: 'Create'})).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', {name: 'Create'})).not.toBeInTheDocument();
   });
 
   it('opens route-specific help content from the header', () => {
